@@ -6,7 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Footer Section | Tourism Management System</title>
+    <title>Footer Section | Tour Booking System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
@@ -77,7 +77,7 @@ if (session_status() == PHP_SESSION_NONE) {
 </head>
 <body>
     <footer>
-        <p>&copy; 2025 Tourism Management System | All Rights Reserved</p>
+        <p>&copy; 2025 Tour Booking System | All Rights Reserved</p>
         <p>Created with <span style="color: red;">&#10084;</span> by Your Company</p>
         
         <div class="social-links">

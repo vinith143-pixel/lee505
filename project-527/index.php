@@ -1,31 +1,3 @@
-<?php
-session_start();
-include('includes/config.php');
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    try {
-        $name = htmlspecialchars($_POST['name']);
-        $email = htmlspecialchars($_POST['email']);
-        $phone = htmlspecialchars($_POST['phone']);
-
-        $sql = "INSERT INTO users (name, email, phone) VALUES (:name, :email, :phone)";
-        $stmt = $dbh->prepare($sql);
-        $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':phone', $phone);
-
-        if ($stmt->execute()) {
-            header("Location: home.php");
-            exit();
-        } else {
-            echo "<p style='color:red; text-align:center;'>Registration failed. Please try again.</p>";
-        }
-    } catch (PDOException $e) {
-        echo "<p style='color:red; text-align:center;'>Error: " . $e->getMessage() . "</p>";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +101,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="container">
     <h2>User Registration</h2>
-    <form action="home.php" method="POST">
+    <!-- Form action is set to the current page to submit form -->
+    <form action="registration.php" method="POST">
         <label for="name">Full Name:</label>
         <input type="text" name="name" id="name" placeholder="Enter your full name" required>
 
@@ -145,11 +118,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
-
-<!-- CREATE TABLE users (
-    id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    phone VARCHAR(15) NOT NULL
-);
- -->

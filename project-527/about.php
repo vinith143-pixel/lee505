@@ -6,7 +6,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>About Us | Tourism Management System</title>
+    <title>About Us | Tour Booking System</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,7 +52,7 @@
     <div class="about-container">
         <div class="about-content">
             <h2>About Us</h2>
-            <p>Welcome to the <strong>Tourism Management System</strong>, your ultimate travel companion. Our platform is designed to provide seamless travel experiences by offering a wide range of customizable tour packages that cater to different tastes and budgets.</p>
+            <p>Welcome to the <strong>Tour Booking System</strong>, your ultimate travel companion. Our platform is designed to provide seamless travel experiences by offering a wide range of customizable tour packages that cater to different tastes and budgets.</p>
             
             <h3>Our Mission</h3>
             <p>We believe that traveling should be effortless and enjoyable. Our mission is to connect travelers with the best destinations, providing them with an easy-to-use booking system and personalized support. Whether you're looking for adventure, relaxation, or cultural experiences, we have something for everyone.</p>

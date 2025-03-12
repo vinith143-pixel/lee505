@@ -9,10 +9,15 @@ if (!isset($_SESSION['admin'])) {
 }
 
 // Fetch all users from the database
-$sql = "SELECT * FROM users ORDER BY id DESC";
-$query = $dbh->prepare($sql);
-$query->execute();
-$users = $query->fetchAll(PDO::FETCH_OBJ);
+try {
+    $sql = "SELECT * FROM users ORDER BY id DESC";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $users = $query->fetchAll(PDO::FETCH_OBJ);
+} catch (PDOException $e) {
+    echo "Database Error: " . $e->getMessage();
+    exit;
+}
 
 // Handle AJAX delete request
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_user"])) {
@@ -30,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_user"])) {
             echo "error";
         }
     } catch (PDOException $e) {
-        echo "Database Error";
+        echo "Database Error: " . $e->getMessage();
     }
     exit();
 }

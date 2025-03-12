@@ -202,7 +202,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_invoice"])) {
             </tr>
         <?php } ?>
     </table>
-    <a href="admin-dashboard.php" class="btn-back">Back</a>
+</div>
+<div>
+<a href="admin-dashboard.php" class="btn-back">Back</a>
 </div>
 </body>
 </html>

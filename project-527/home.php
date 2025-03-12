@@ -9,7 +9,7 @@ include('includes/config.php');
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>TMS | Tourism Management System</title>
+    <title>LDK-Tour Booking System</title>
     <link href="css/style.css" rel='stylesheet' type='text/css' />
 
     <style>
@@ -84,16 +84,16 @@ include('includes/config.php');
 <!-- Hero Section (Banner) -->
 <div class="banner">
     <div class="container">
-        <h1>Welcome to TMS - Tourism Management System</h1>
-        <p>Explore the best of Tamil Nadu with our curated tour packages.</p>
+        <h1>Welcome to LDK - Tour Booking System</h1>
+        <p>Explore the best of India with our curated tour packages.</p>
         <a href="package-list.php" class="view">View Tour Packages</a>
     </div>
 </div>
 
 <!-- Introduction Section -->
 <div class="container intro">
-    <h2>About TMS</h2>
-    <p>Tourism Management System (TMS) is a comprehensive platform to help you explore and book exciting tour packages in Tamil Nadu. Whether you're looking for a serene hill station experience, a cultural temple tour, or a relaxing beach vacation, we have something for everyone!</p>
+    <h2>About LDK</h2>
+    <p>Tour Booking System (LDK) is a comprehensive platform to help you explore and book exciting tour packages in Tamil Nadu. Whether you're looking for a serene hill station experience, a cultural temple tour, or a relaxing beach vacation, we have something for everyone!</p>
 </div>
 
 <!-- Special Note Section (Moved Above Featured Packages) -->
@@ -152,15 +152,15 @@ include('includes/config.php');
     <h3>What Our Tourists Say</h3>
     <div class="testimonial-cards">
         <div class="testimonial-card">
-            <p>"An unforgettable experience! TMS made our trip to Ooty easy and hassle-free. Highly recommend the services."</p>
+            <p>"An unforgettable experience! LDK made our trip to Ooty easy and hassle-free. Highly recommend the services."</p>
             <h5>- Sarah, USA</h5>
         </div>
         <div class="testimonial-card">
-            <p>"I booked a family trip to Kodaikanal with TMS. The entire process was smooth, and we had an amazing time!"</p>
+            <p>"I booked a family trip to Kodaikanal with LDK. The entire process was smooth, and we had an amazing time!"</p>
             <h5>- Rajesh, India</h5>
         </div>
         <div class="testimonial-card">
-            <p>"Rameswaram Temple tour was beautiful. TMS took care of everything, from bookings to transportation."</p>
+            <p>"Rameswaram Temple tour was beautiful. LDK took care of everything, from bookings to transportation."</p>
             <h5>- John, UK</h5>
         </div>
     </div>

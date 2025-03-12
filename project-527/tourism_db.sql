@@ -17,9 +17,43 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'admin123');
+(1, 'bca305', 'admin123');
 
 -- --------------------------------------------------------
+
+CREATE TABLE users (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL
+);
+
+-- Create a table to store bus information
+CREATE TABLE tblbuses (
+    BusId INT AUTO_INCREMENT PRIMARY KEY,       -- Unique ID for each bus
+    BusName VARCHAR(255) NOT NULL,               -- Name of the bus (e.g., "Luxury Bus")
+    Route VARCHAR(255) NOT NULL,                 -- Route information (e.g., "City A to City B")
+    TotalSeats INT NOT NULL,                    -- Total number of seats on the bus
+    BookedSeats INT DEFAULT 0,                  -- Number of seats already booked
+    TicketPrice DECIMAL(10, 2) NOT NULL,        -- Price per seat for booking
+    BusFeatures TEXT,                            -- Features of the bus (e.g., "Air conditioning, Wi-Fi, Reclining seats")
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Timestamp of when the bus was added
+);
+
+-- Create a table to store the bookings for buses
+CREATE TABLE tblbusbookings (
+    BookingId INT AUTO_INCREMENT PRIMARY KEY,    -- Unique ID for each booking
+    BusId INT NOT NULL,                          -- The BusId for which the booking is made
+    Name VARCHAR(255) NOT NULL,                  -- Passenger's name
+    Email VARCHAR(255) NOT NULL,                 -- Passenger's email
+    Mobile VARCHAR(15) NOT NULL,                 -- Passenger's mobile number
+    NumSeats INT NOT NULL,                      -- Number of seats booked
+    StartDate DATE NOT NULL,                     -- Start date of the travel
+    EndDate DATE NOT NULL,                       -- End date of the travel
+    PaymentStatus VARCHAR(50) DEFAULT 'Pending', -- Payment status (e.g., "Pending", "Completed")
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Timestamp of when the booking was made
+    FOREIGN KEY (BusId) REFERENCES tblbuses(BusId) -- Foreign key linking to the buses table
+);
 
 --
 -- Table structure for table `contact_messages`

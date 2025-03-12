@@ -96,7 +96,7 @@ include('includes/config.php');
         ?>
             <div class="package-card">
                 <div class="package-img">
-                    <img src="admin/packageimages/<?php echo htmlentities($result->PackageImage); ?>" alt="Package Image">
+                    <img src="admin/images/<?php echo htmlentities($result->PackageImage); ?>" alt="Package Image">
                 </div>
                 <div class="package-details">
                     <h4><?php echo htmlentities($result->PackageName); ?></h4>
@@ -105,7 +105,7 @@ include('includes/config.php');
                     <h5>Price: Rs <?php echo htmlentities($result->PackagePrice); ?></h5>
                     <div class="buttons">
                         <a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId); ?>" class="view">View Details</a>
-                        <a href="booking.php?pkgid=<?php echo htmlentities($result->PackageId); ?>" class="book">Book Now</a>
+                        <a href="bus_booking.php?pkgid=<?php echo htmlentities($result->PackageId); ?>" class="book">Book Now</a>
                     </div>
                 </div>
             </div>

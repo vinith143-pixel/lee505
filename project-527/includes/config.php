@@ -1,17 +1,13 @@
 <?php
-// Database configuration settings
-$host = 'localhost';  // your database server
-$dbname = 'suma'; // database name
-$username = 'root'; // your database username
-$password = ''; // your database password (usually empty for localhost)
+$host = 'localhost'; // Typically 'localhost' for local development
+$dbname = 'suma';    // Your database name
+$username = 'root';  // Default username for XAMPP (MySQL)
+$password = '';      // Default password for XAMPP (MySQL) is empty
 
 try {
-    // Create a PDO connection
     $dbh = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Set error mode to exception
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    // Handle errors if the connection fails
-    echo "Connection failed: " . $e->getMessage();
-    exit;
+    die("Database Error: " . $e->getMessage());
 }
 ?>

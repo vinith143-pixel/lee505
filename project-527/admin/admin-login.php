@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Admin Login | Tourism Management System</title>
+    <title>Admin Login | Tour Booking System</title>
     <style>
         /* Global Styles */
         * {
